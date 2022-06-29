@@ -41,10 +41,9 @@ def check_args(args):
         print('batch size must be larger than or equal to one')
     return args
 
-root = os.getcwd()[:5]
 # define the H5 data folder
-data_root_part = root+"/lirh/pointcloud2/dataset/Generation/shapenetcore_partanno_segmentation_benchmark_v0/"
-data_root_h5 = root+"/lirh/pointcloud2/dataset/Generation/H5/"
+# data_root_part = root+"/lirh/pointcloud2/dataset/Generation/shapenetcore_partanno_segmentation_benchmark_v0/"
+data_root_h5 = r'/alluxio/training/datalake/home/galih/spgan/processed_dataset/'
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--phase', type=str, default='train', help='train or test ?')
@@ -72,8 +71,8 @@ parser.add_argument('--optimizer', default='adam', help='adam or momentum [defau
 parser.add_argument('--gan', default='ls', help='[ls,wgan,hinge]')
 parser.add_argument('--debug', type=bool, default = True,  help='print log')
 parser.add_argument('--data_root', type=str,default=data_root_h5, help='data root [default: xxx]')
-parser.add_argument('--data_root_part', type=str,default=data_root_part, help='data root [default: xxx]')
-#parser.add_argument('--data_root', default='/test/shapenetcore_partanno_segmentation_benchmark_v0/', help='data root [default: xxx]')
+parser.add_argument('--data_root_part', type=str,default='', help='data root [default: xxx]')
+# parser.add_argument('--data_root', default='/test/shapenetcore_partanno_segmentation_benchmark_v0/', help='data root [default: xxx]')
 parser.add_argument('--log_dir', default='log', help='log_dir')
 parser.add_argument('--log_info', default='log_info.txt', help='log_info txt')
 parser.add_argument('--model_dir', default='PDGN_v1', help='model dir [default: None, must input]')
