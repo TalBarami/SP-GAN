@@ -1,0 +1,10 @@
+numpy
+pandas
+imageio
+h5py
+sklearn
+einops
+scipy
+matplotlib
+tqdm
+tensorboardX

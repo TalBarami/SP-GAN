@@ -24,7 +24,7 @@ from Common import point_operation
 from Common import data_utils as d_util
 from Common.loss_utils import get_local_pair,compute_all_metrics2,AverageValueMeter,dist_simple
 from Common import loss_utils
-# from tensorboardX import SummaryWriter
+from tensorboardX import SummaryWriter
 from Common.visu_utils import plot_pcd_three_views,point_cloud_three_views,plot_pcd_multi_rows
 from tqdm import tqdm
 from Generation.Generator import Generator
